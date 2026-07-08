@@ -127,6 +127,31 @@ Or manually follow the phases in `SKILL.md`.
 - [mcp-os-native-automation](https://github.com/a92070888-dev/mcp-os-native-automation) — FEOM Windows GUI automation MCP server
 - [Hermes Agent](https://hermes-agent.nousresearch.com) — The autonomous AI agent platform
 
+## Hermes Architecture Compatibility
+
+This test suite validates the runtime environment defined in the [Hermes Architecture Specification](https://github.com/a92070888-dev/hermes-architecture).
+
+### Tested Capabilities
+
+| Capability | Registry Reference | Status |
+|:-----------|:------------------|:------:|
+| `windows_desktop` | Snapshot/Click/Type/App | ✅ |
+| `agent_delegation` | delegate_task (15 subagents) | ✅ |
+| `terminal` | ffmpeg recording | ✅ |
+| `filesystem` | Report generation | ✅ |
+| `vision` | Quadrant verification | ✅ |
+
+### Runtime Compliance
+
+- ✅ Windows 10/11 desktop automation
+- ✅ Multi-agent delegation (max 3 concurrent per Hermes policy)
+- ✅ Evidence-based verification (screenshots + file checks)
+- ✅ Pre-action focus defense (verification-trap-defense)
+- ✅ Event-driven phase transitions
+
+See [capability-registry.md](https://github.com/a92070888-dev/hermes-architecture/blob/main/docs/capability-registry.md) for the complete capability definitions.
+
+
 ## License
 
 MIT
